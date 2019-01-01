@@ -13,7 +13,15 @@ tab.geometry('300x150')
 def opn_url():
     g2int = g1int.get()
     type(g2int)
-    webbrowser.open(g2int)
+    
+    try:
+        webbrowser.open(g2int)
+        
+    except:
+        tab_1 = tk()
+        tab_1.title('error')
+        tab_1.geometry('150x150')
+        lbl_2 = Label(tab_1, text = "Invalid inputs").pack()
       
 
 
